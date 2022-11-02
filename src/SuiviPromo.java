@@ -1,5 +1,7 @@
 public class SuiviPromo {
     public static void main(String[] args) {
+
+        /*
         GroupeTD groupeTD1 = new GroupeTD("TD1");
         GroupeTD groupeTD2 = new GroupeTD("TD2");
 
@@ -43,6 +45,12 @@ public class SuiviPromo {
         groupeTD1.afficherEtudiants();
         System.out.println("Liste des étudiants du groupe TD2:");
         groupeTD2.afficherEtudiants();
+
+
+         */
+
+        Etudiant etu = new Etudiant(1, "Dupont", "Jean");
+        System.out.println(etu);
 
     }
 }

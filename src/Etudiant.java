@@ -52,4 +52,9 @@ public class Etudiant {
         if (getNom() != null ? !getNom().equals(etudiant.getNom()) : etudiant.getNom() != null) return false;
         return getPrenom() != null ? getPrenom().equals(etudiant.getPrenom()) : etudiant.getPrenom() == null;
     }
+
+    // toString
+    public String toString() {
+        return "Prenom: " + this.prenom + "\tNom: " + this.nom + "\t(" + this.numEtudiant + ")";
+    }
 }
