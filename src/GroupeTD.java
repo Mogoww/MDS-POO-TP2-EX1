@@ -6,6 +6,12 @@ public class GroupeTD {
     private ArrayList<Etudiant> listeEtudiants;
     private int nbEtudiants;
 
+    //----------- Constructeur -----------
+    public GroupeTD() {
+        this.listeEtudiants = new ArrayList<Etudiant>();
+        this.nbEtudiants = 0;
+    }
+
     //----------- méthodes -----------
 
     // ajouter un étudiant
