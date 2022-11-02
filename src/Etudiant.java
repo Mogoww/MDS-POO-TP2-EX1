@@ -40,4 +40,16 @@ public class Etudiant {
         this.prenom = prenom;
     }
 
+    // equals
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Etudiant etudiant)) return false;
+
+        if (getNumEtudiant() != etudiant.getNumEtudiant()) return false;
+        if (getNom() != null ? !getNom().equals(etudiant.getNom()) : etudiant.getNom() != null) return false;
+        return getPrenom() != null ? getPrenom().equals(etudiant.getPrenom()) : etudiant.getPrenom() == null;
+    }
 }

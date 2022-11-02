@@ -5,10 +5,12 @@ public class GroupeTD {
     //----------- Attributs -----------
     private ArrayList<Etudiant> listeEtudiants;
     private int nbEtudiants;
+    private String nomGroupe;
 
     //----------- Constructeur -----------
-    public GroupeTD() {
-        this.listeEtudiants = new ArrayList<Etudiant>();
+    public GroupeTD(String nomGroupe) {
+        this.nomGroupe = nomGroupe;
+        this.listeEtudiants = new ArrayList<Etudiant>(10);
         this.nbEtudiants = 0;
     }
 
@@ -36,19 +38,14 @@ public class GroupeTD {
 
     // chercher un étudiant par son numéro, nom et prénom
     public int chercherEtudiant(int numEtudiant, String nom, String prenom) {
-        for(Etudiant etudiant : listeEtudiants){
-            if (etudiant.getNumEtudiant() == numEtudiant && etudiant.getNom().equals(nom) && etudiant.getPrenom().equals(prenom)) {
-                return listeEtudiants.indexOf(etudiant);
-            }
-        }
-        return -1;
+        return this.listeEtudiants.indexOf(new Etudiant(numEtudiant, nom, prenom));
     }
 
     // supprimer un étudiant
     public void supprimerEtudiant(int numEtudiant, String nom, String prenom) {
         int index = chercherEtudiant(numEtudiant, nom, prenom);
         if (index != -1) {
-            listeEtudiants.remove(index);
+            this.listeEtudiants.remove(index);
             this.nbEtudiants--;
         }
     }
