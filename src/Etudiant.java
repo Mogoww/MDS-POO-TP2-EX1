@@ -8,6 +8,11 @@ public class Etudiant {
 
     // getters et setters
 
+
+    public int getNumEtudiant() {
+        return numEtudiant;
+    }
+
     public void setNumEtudiant(int numEtudiant) {
         this.numEtudiant = numEtudiant;
     }
